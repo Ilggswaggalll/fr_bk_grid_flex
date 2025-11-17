@@ -1,11 +1,581 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Франшиза стабилизированных цветов - BLOOM BOOM</title>
+
+    <script src="scripts.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script>
+        ymaps.ready(function() {
+            var map = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 10
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
 
 </head>
+
+
+
 <body>
-    <h style="font-family: Damascus, serif; font-style: italic;">БАБУЛЯ</h>
+    <header class="header">
+        <div class="header_container">
+            <div class="header_left">
+                <div class="header_logo">
+                    logo
+                </div>
+                <div class="header_brand">
+                    <a href="mockup.html" aria-label="На главную" class="brand_name">BLOOM BOOM</a>
+
+                    <div class="brand_description">
+                        Оптовая и розничная торговля<br>
+                        стабилизированными цветами
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_right">
+                <div class="work_time">Время работы: ежедневно с 10:00 до 18:00</div>
+                <a href="tel:+70000000000" class="phone">+7 000 000 00 00</a>
+                <button class="callback_btn">Заказать обратный звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section aria-labelledby="hero-title" class="hero_section">
+            <h1 class="hero_title">Откройте магазин стабилизрованных цветов по франшизе
+                                    с окупаемостью от 2-х месяцев с чистой прибылью от 30% до 50%
+            </h1>
+
+            <div class="hero_attraction">
+                <ul class="hero_attraction_list">
+                    <li>Стоимость франшизы от 190 000 руб</li>
+                    <li>Срок открытия от 2-х недель</li>
+                    <li>Вас доводят до результата владельцы сети</li>
+                </ul>
+
+                <button class="hero_attraction_button">Узнать подробнее</button>
+            </div>
+        </section>
+
+        <section class="comparative_section">
+            <h2 class="comparative_title">
+                Чем стабилизированные цветы лучше обычных?
+            </h2>
+            <p class="comparative_subtitle">
+                Оцените преимущества стабилизированных цветов
+            </p>
+
+            <div class="comparative_container">
+                <div class="comparative_table_title">
+                </div>
+            </div>
+
+            <div class="comparative_table">
+                <div class="comparative_table_header">
+                    <div class="comp_table_empty_cell"></div>
+                    <div class="comp_table_header_cell">Стабилизированные цветы</div>
+                    <div class="comp_table_header_cell">Обычные цветы</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Практичность</div>
+                    <div class="comp_table_row_cell">Не требуют ухода</div>
+                    <div class="comp_table_row_cell">Требуют постоянного ухода</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Оригинальность</div>
+                    <div class="comp_table_row_cell">Неординарный подарок</div>
+                    <div class="comp_table_row_cell">Банальный подарок на каждый праздник</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Внешний вид</div>
+                    <div class="comp_table_row_cell">Сохраняют нежность и красоту живого цветка</div>
+                    <div class="comp_table_row_cell">Засыхают в течение нескольких недель</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Стоимость</div>
+                    <div class="comp_table_row_cell">Сравнима с обычным букетом</div>
+                    <div class="comp_table_row_cell">Цена от 1000 руб</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Долговечность</div>
+                    <div class="comp_table_row_cell">Могут стоять десятилетиями</div>
+                    <div class="comp_table_row_cell">Увядают через две недели</div>
+                </div>
+
+                <div class="comparative_table_row">
+                    <div class="comp_table_row_header">Безопасность</div>
+                    <div class="comp_table_row_cell">Гипоаллергенны</div>
+                    <div class="comp_table_row_cell">Могут вызывать аллергию</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cooperation_section">
+            <h2 class="cooperation_title">
+                Выбирайте один из 3х вариантов сотрудничества
+            </h2>
+
+            <div class="cooperation_option">
+                <h3 class="cooperation_option_title">
+                    Формат работы «Магазин живых цветов Flowers»
+                </h3>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">эксклюзив на город</li>
+                            <li class="cooperation_option_list_item">эксклюзив на регион (при условии предоставления<br>
+                                подробного бизнес плана</li>
+                            <li class="cooperation_option_list_item">открытие фирменного магазина (от 15 до 30 км м)</li>
+                            <li class="cooperation_option_list_item">минимальная закупочная стоимость товара</li>
+                            <li class="cooperation_option_list_item">обучение в школе "Франчайзера BLOOM BOOM"<br>
+                                на закрытой площадке</li>
+                            <li class="cooperation_option_list_item">мотивационная бонусная система</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_subtitle">
+                    Инвестиции в проект:
+                </h4>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">паушальный взнос - 150 000</li>
+                            <li class="cooperation_option_list_item">строительные и отделочные работы - 50 000</li>
+                            <li class="cooperation_option_list_item">вывеска - 5000 - 20 000</li>
+                            <li class="cooperation_option_list_item">оборудование торгового зала - от 50 000</li>
+                            <li class="cooperation_option_list_item">IT оборудование - от 30 000 до 80 000</li>
+                            <li class="cooperation_option_list_item">товарный запас - 500 000 - 800 000</li>
+                            <li class="cooperation_option_list_item">реклама, сайт, соц сети при запуске - 20 000</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_summary">
+                    ИТОГО: от 805 00 и до 1 170 000
+                </h4>
+            </div>
+
+            <div class="cooperation_option">
+                <h3 class="cooperation_option_title">
+                    Формат работы «Шоурум, точка "остров"»
+                </h3>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">эксклюзив на город (при планировании объема закупок)</li>
+                            <li class="cooperation_option_list_item">эксклюзив на регион (при условии предоставления<br>
+                                подробного бизнес плана</li>
+                            <li class="cooperation_option_list_item">минимальная закупочная стоимость товара</li>
+                            <li class="cooperation_option_list_item">обучение в школе "Франчайзера BLOOM BOOM"<br>
+                                на закрытой площадке</li>
+                            <li class="cooperation_option_list_item">мотивационная бонусная система</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_subtitle">
+                    Инвестиции в проект:
+                </h4>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">паушальный взнос - 100 000 (взымается с городов<br>
+                                численностью больше 300 000, для всех остальных<br>
+                                городов, оплата маркетинговой поддержки и центра<br>
+                                обучения 20 000</li>
+                            <li class="cooperation_option_list_item">оборудование торговой площади - 20 000 - 50 000</li>
+                            <li class="cooperation_option_list_item">IT оборудование + программа - от 20 000 до 30 000</li>
+                            <li class="cooperation_option_list_item">товарный запас - 300 000</li>
+                            <li class="cooperation_option_list_item">реклама, соц сети, сайт при запуске - 20 000</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_summary">
+                    ИТОГО: от 360 000 до 500 000
+                </h4>
+            </div>
+
+            <div class="cooperation_option">
+                <h3 class="cooperation_option_title">
+                    Формат работы «Склад + онлайн торговля»
+                </h3>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">открытие склада с минимальным товарным запасом</li>
+                            <li class="cooperation_option_list_item">эксклюзив только при предъявлении подробного<br>
+                            бизнес плана</li>
+                            <li class="cooperation_option_list_item">минимальная закупочная стоимость товара</li>
+                            <li class="cooperation_option_list_item">обучение в школе "Франчайзера BLOOM BOOM"<br>
+                                на закрытой площадке</li>
+                            <li class="cooperation_option_list_item">мотивационная бонусная система</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_subtitle">
+                    Инвестиции в проект:
+                </h4>
+
+                <div class="cooperation_option_container">
+                    <div class="cooperation_option_container_item">
+                        <ul class="cooperation_option_list">
+                            <li class="cooperation_option_list_item">маркетинговый платеж в центр обучения - 20 000</li>
+                            <li class="cooperation_option_list_item">аренда склада в вашем регионе под товарный запас -<br>
+                            20 000 - 40 000</li>
+                            <li class="cooperation_option_list_item">реклама, сайт, соц сети при запуске - от 50 000</li>
+                            <li class="cooperation_option_list_item">товарный запас - 100 000</li>
+                        </ul>
+
+                        <div class="cooperation_option_picture">
+                            picture_1
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="cooperation_option_summary">
+                    ИТОГО: от 190 000
+                </h4>
+            </div>
+        </section>
+
+        <section class="application_section">
+            <h2 class="application_title">
+                Оставьте заявку и получите<br>
+                индивидуальный расчет стоимости
+            </h2>
+
+            <form class="application_container">
+                <label>
+                    <input type="text" placeholder="Ваше имя" class="application_form-input" required>
+                </label>
+                <label>
+                    <input type="tel" placeholder="Ваш телефон" class="application_form-input" required>
+                </label>
+                <button type="submit" class="application_form-button">Получить индивидуальный расчет стоимости</button>
+            </form>
+        </section>
+
+        <section class="advantages_of_stabilized_flowers">
+            <h2 class="advantages_title">
+                6 несравненных плюсов стабилизированных цветов
+            </h2>
+
+            <div class="advantages_container">
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Сохраняют аромат только что сорванных цветов</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Не требуют специализированного ухода</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Абсолютно безвредны для домашних животных</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Мягкие и пластичные, совсем как живые цветы</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Гипоаллергенны</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Внешний вид, который держится годами</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="individual_manager">
+            <h2 class="individual_manager_title">
+                Для открытия франшизы за вами закрепляется индивидуальный менеджер
+            </h2>
+
+            <p class="individual_manager_description">
+                Познакомтесь со своими будущими партнерами, которые за руку доведут вас до<br>
+                магазина c оборотом в 2 000 000 рублей в месяц
+            </p>
+
+            <div class="individual_manager_container">
+                <button class="nav-btn prev" disabled>‹</button>
+
+                <div class="individual_manager_wrapper">
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+
+                    <div class="individual_manager_item">
+                        <div class="manager_photo">фото</div>
+                        <p class="manager_description">Должность</p>
+                        <p class="manager_description">Опыт</p>
+                        <button class="manager_button">Задать вопрос</button>
+                    </div>
+                </div>
+
+                <button class="nav-btn next">›</button>
+            </div>
+        </section>
+
+        <section class="advantages_of_working">
+            <h2 class="advantages_title">
+                6 преимуществ работы с BLOOM BOOM
+            </h2>
+
+            <div class="advantages_container">
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Доступ к онлайн школе франчайзера</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Маркетинг при запуске, реклама на сайте<br>
+                        и в социальных сетях</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Минимальная закупочная стоимость товара</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Аренда склада в вашем регионе под товарный запас</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Эксклюзивные права на франшизу в вашем городе\регионе</p>
+                </div>
+
+                <div class="advantages_item">
+                    <div class="advantages_icon">
+                        pct
+                    </div>
+                    <p class="advantages_advantage">Мотивационная бонусная система</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="faq_container">
+                <h2 class="faq_title">Частые вопросы</h2>
+
+                <div class="faq_list">
+                    <!-- Вопрос 1 -->
+                    <div class="faq_item">
+                        <button class="faq_question">
+                            <span>Что такое франшиза?</span>
+                            <svg class="faq_icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq_answer">
+                            <p>Франшиза — это бизнес-модель, при которой владелец бренда (франчайзер) передает право на использование своей торговой марки, бизнес-процессов и ноу-хау другому лицу (франчайзи) за определенное вознаграждение.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="faq_item">
+                        <button class="faq_question">
+                            <span>Из чего состоит франшиза?</span>
+                            <svg class="faq_icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq_answer">
+                            <p>Франшиза обычно включает в себя: брендбук, бизнес-план, маркетинговые материалы, обучение персонала, стандарты качества, поставщиков и постоянную поддержку от франчайзера.</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="faq_item">
+                        <button class="faq_question">
+                            <span>Сколько стоит франшиза?</span>
+                            <svg class="faq_icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq_answer">
+                            <p>Стоимость франшизы зависит от многих факторов: известности бренда, региона, размера бизнеса. Обычно включает паушальный взнос (разовый платеж) и роялти (ежемесячные отчисления).</p>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 4 -->
+                    <div class="faq_item">
+                        <button class="faq_question">
+                            <span>На что обратить внимание при выборе франшизы?</span>
+                            <svg class="faq_icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq_answer">
+                            <p>При выборе франшизы важно учитывать: репутацию франчайзера, отзывы других франчайзи, прозрачность условий, размер инвестиций, срок окупаемости, уровень поддержки и перспективы развития бренда.</p>
+                        </div>
+                    </div>
+
+                    <!-- Можно добавить больше вопросов по аналогии -->
+                </div>
+            </div>
+        </section>
+
+        <section class="consultation_section">
+            <h2 class="consultation_title">
+                Остались вопросы?
+            </h2>
+
+            <p class="consultation_text">
+                Задайте их прямо сейчас и получите консультацию в течение 15 минут
+            </p>
+
+            <div class="consultation_container">
+                <label>
+                    <textarea class="consultation_question-input" placeholder="Ваше сообщение..."></textarea>
+                </label>
+
+                <label for="phone_2" class="form-label"></label>
+                <input type="tel" id="phone_2" name="phone_2" class="consultation_form-input" placeholder="+7 (000) 000-00-00" required>
+
+                <button class="consultation_form-button">
+                    Получить консультацию
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_map">
+            <div id="map" style="width: 100%; height: 100%;"></div>
+        </div>
+
+
+        <div class="footer_container">
+            <div class="footer_left">
+                <div class="footer_logo">
+                    logo
+                </div>
+                <div class="footer_brand">
+                    <a href="mockup.html" aria-label="На главную" class="brand_name">BLOOM BOOM</a>
+
+                    <div class="brand_description">
+                        Оптовая и розничная торговля<br>
+                        стабилизированными цветами
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_right">
+                <div class="work_time">Время работы: ежедневно с 10:00 до 18:00</div>
+                <div class="phone">+7 000 000 00 00</div>
+            </div>
+        </div>
+
+
+        <div class="footer_bottom">
+            © 2025 BLOOM BOOM. Все права защищены.
+        </div>
+    </footer>
 </body>
 </html>
