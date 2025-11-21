@@ -122,28 +122,84 @@ class FAQAccordion {
     }
 }
 
+// Auto-resize для textarea
+function initAutoResizeTextarea() {
+    const textarea = document.querySelector('.consultation_question-input');
+
+    if (textarea) {
+        // Функция автоматического изменения высоты
+        function autoResize() {
+            // Сбрасываем высоту чтобы получить правильный scrollHeight
+            textarea.style.height = 'auto';
+            // Устанавливаем новую высоту based on scrollHeight
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+
+        // События для авто-ресайза
+        textarea.addEventListener('input', autoResize);
+        textarea.addEventListener('keydown', autoResize);
+        textarea.addEventListener('keyup', autoResize);
+
+        // Инициализация при загрузке
+        autoResize();
+    }
+}
+
+
+// Инициализация Яндекс Карты
+function initYandexMap() {
+    // Проверяем, существует ли элемент карты на странице
+    const mapElement = document.getElementById('yandex-map');
+
+    if (!mapElement) return;
+
+    // Ждем загрузки API Яндекс Карт
+    if (typeof ymaps === 'undefined') {
+        console.warn('Yandex Maps API not loaded');
+        return;
+    }
+
+    ymaps.ready(function() {
+        // Координаты центра карты (замените на свои)
+        const center = [55.76, 37.64]; // Москва
+
+        // Создаем карту
+        const map = new ymaps.Map('yandex-map', {
+            center: center,
+            zoom: 10,
+            controls: ['zoomControl', 'fullscreenControl']
+        });
+
+        // Добавляем метку
+        const placemark = new ymaps.Placemark(center, {
+            hintContent: 'BLOOM BOOM',
+            balloonContent: `
+                <strong>BLOOM BOOM</strong><br>
+                Оптовая и розничная торговля<br>
+                стабилизированными цветами<br>
+                <br>
+                Время работы: ежедневно с 10:00 до 18:00<br>
+                Телефон: +7 000 000 00 00
+            `
+        }, {
+            preset: 'islands#redIcon'
+        });
+
+        map.geoObjects.add(placemark);
+
+        // Оптимизация для мобильных устройств
+        map.behaviors.disable('scrollZoom');
+
+        // Адаптация под разные размеры экрана
+        setTimeout(() => {
+            map.container.fitToViewport();
+        }, 100);
+    });
+}
+
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     new FAQAccordion();
+    initAutoResizeTextarea();
+    initYandexMap();
 });
-
-// Яндекс Карты
-function initMap() {
-    const map = new ymaps.Map('map', {
-        center: [55.76, 37.64], // Координаты Москвы
-        zoom: 14
-    });
-
-    // Добавляем метку
-    const placemark = new ymaps.Placemark([55.76, 37.64], {
-        hintContent: 'Наш офис',
-        balloonContent: 'г. Москва, ул. Примерная, д. 123'
-    });
-
-    map.geoObjects.add(placemark);
-}
-
-// Инициализация карты
-if (typeof ymaps !== 'undefined') {
-    ymaps.ready(initMap);
-}

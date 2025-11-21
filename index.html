@@ -9,15 +9,6 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
-    <script>
-        ymaps.ready(function() {
-            var map = new ymaps.Map('map', {
-                center: [55.76, 37.64],
-                zoom: 10
-            });
-        });
-    </script>
-
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -79,6 +70,7 @@
                 </div>
             </div>
 
+            <div class="comparative_table_wrapper">
             <div class="comparative_table">
                 <div class="comparative_table_header">
                     <div class="comp_table_empty_cell"></div>
@@ -121,6 +113,7 @@
                     <div class="comp_table_row_cell">Гипоаллергенны</div>
                     <div class="comp_table_row_cell">Могут вызывать аллергию</div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -531,23 +524,26 @@
             </p>
 
             <div class="consultation_container">
+
                 <label>
                     <textarea class="consultation_question-input" placeholder="Ваше сообщение..."></textarea>
                 </label>
 
-                <label for="phone_2" class="form-label"></label>
-                <input type="tel" id="phone_2" name="phone_2" class="consultation_form-input" placeholder="+7 (000) 000-00-00" required>
+                <div class="consultation_bottom-row">
+                    <label>
+                        <input type="tel" class="consultation_form-input" placeholder="+7 (000) 000-00-00" required>
+                    </label>
 
-                <button class="consultation_form-button">
-                    Получить консультацию
-                </button>
+                    <button class="consultation_form-button">Получить консультацию</button>
+                </div>
+
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer_map">
-            <div id="map" style="width: 100%; height: 100%;"></div>
+            <div id="yandex-map" style="width: 100%; height: 100%;"></div>
         </div>
 
 
@@ -568,7 +564,7 @@
 
             <div class="footer_right">
                 <div class="work_time">Время работы: ежедневно с 10:00 до 18:00</div>
-                <div class="phone">+7 000 000 00 00</div>
+                <a href="tel:+70000000000" class="phone">+7 000 000 00 00</a>
             </div>
         </div>
 
