@@ -607,7 +607,7 @@ body {
     flex-direction: column;
     gap: 2rem;
     margin: 2rem auto;
-    max-width: 1100px;
+    max-width: min(1100px, 95%);
 }
 .cooperation_option_container_item{
     display: flex;
@@ -652,13 +652,17 @@ body {
     font-size: 1.1rem;
 }
 .cooperation_option_picture{
-    width: 120px;
-    height: 90px;
+    aspect-ratio: 4 / 3;
+    width: clamp(400px, 20vw, 600px);
     border-radius: 10px;
-    object-fit: cover;
+    overflow: hidden;
     background: rgba(0,0,0,0.3);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(255, 94, 120, 0.4);
     flex-shrink: 0;
+}
+.cooperation_option_picture_image{
+    width: 100%;
+    height: 100%;
 }
 .cooperation_option_subtitle{
     font-size: 1.1rem;
@@ -680,8 +684,8 @@ body {
         padding: 1.5rem;
     }
     .cooperation_option_picture {
-        width: 160px;
-        height: 110px;
+        margin-top: 1rem;
+        width: 80%;
         order: -1;
         margin-bottom: 1rem;
     }
@@ -710,6 +714,9 @@ body {
     .cooperation_option_summary {
         max-width: 95%;
     }
+    .cooperation_option_picture{
+        width: 80%;
+    }
 }
 @media (max-width: 600px){
     .cooperation_section{
@@ -727,6 +734,9 @@ body {
     }
     .cooperation_option_list {
         align-items: start;
+    }
+    .cooperation_option_picture{
+        width: 95%;
     }
 }
 
@@ -920,14 +930,15 @@ body {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: linear-gradient(180deg, #ff5e78 0%, #ff3a5b 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: 1.6rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 14px rgba(255, 94, 120, 0.3);
+
+    background-image: url("img/peach_blossom.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%; /* делает responsive */
 }
 .advantages_advantage{
     text-align: left;
@@ -1128,7 +1139,6 @@ body {
 .manager_button {
     background: var(--color-accent-primary);
     color: #fff;
-    width: 200px;
     border: none;
     padding: 12px 30px;
     border-radius: 25px;
@@ -1136,6 +1146,10 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(255, 94, 120, 0.3);
+
+    width: auto;
+    min-width: 180px;
+    max-width: 100%;
 }
 .manager_button:hover {
     background: var(--color-accent-hover);
@@ -1149,6 +1163,9 @@ body {
     }
     .individual_manager_title {
         font-size: 1.7rem;
+    }
+    .manager_button{
+        min-width: 150px;
     }
 }
 @media (max-width: 768px) {
@@ -1175,6 +1192,9 @@ body {
     .individual_manager_description {
         font-size: 1rem;
     }
+    .manager_button{
+        min-width: 150px;
+    }
 }
 /* Дополнительные медиа-запросы для точного контроля */
 @media (max-width: 600px) {
@@ -1191,8 +1211,8 @@ body {
         width: 100px;
         height: 100px;
     }
-    .manager_button {
-        width: 180px;
+    .manager_button{
+        min-width: 100px;
     }
 }
 
