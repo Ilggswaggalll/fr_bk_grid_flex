@@ -592,7 +592,6 @@ body {
 }
 .cooperation_option{
     margin-bottom: 3rem;
-
 }
 .cooperation_option_title{
     font-size: 1.5rem;
@@ -698,7 +697,7 @@ body {
         padding-inline: 1rem;
     }
     .cooperation_option_container {
-        margin: 0.5rem;
+        margin: 0.5rem auto;
         gap: 1rem;
     }
     .cooperation_option_list {
@@ -729,8 +728,7 @@ body {
         font-size: clamp(1.3rem, 3vw, 2.4rem);
     }
     .cooperation_option_container{
-        padding-inline: 0;
-        margin-inline: 0;
+        margin-inline: auto;
     }
     .cooperation_option_list {
         align-items: start;
