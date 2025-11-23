@@ -424,6 +424,7 @@ body {
     }
     .hero_attraction_button{
         align-self: center;
+        margin-left: 0;
     }
 }
 
