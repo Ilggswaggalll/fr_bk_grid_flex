@@ -333,6 +333,11 @@ body {
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+/* Или можно сделать более специфичный класс */
+.hero_title .no-break {
+    white-space: nowrap;
+    display: inline-block;
+}
 .hero_title{
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
@@ -681,14 +686,22 @@ body {
     .cooperation_option_container_item {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: left;
         padding: 1.5rem;
     }
     .cooperation_option_picture {
         margin-top: 1rem;
-        width: 80%;
+        width: 90%;
         order: -1;
         margin-bottom: 1rem;
+    }
+    .cooperation_option_list{
+        align-items: flex-start;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .cooperation_option_list_item{
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 768px){
@@ -716,7 +729,13 @@ body {
         max-width: 95%;
     }
     .cooperation_option_picture{
-        width: 80%;
+        width: 85%;
+    }
+    .cooperation_option_list{
+        width: 85%;
+    }
+    .cooperation_option_list_item{
+        font-size: 1rem;
     }
 }
 @media (max-width: 600px){
@@ -736,6 +755,9 @@ body {
         align-items: start;
     }
     .cooperation_option_picture{
+        width: 95%;
+    }
+    .cooperation_option_list{
         width: 95%;
     }
 }
